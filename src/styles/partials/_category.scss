@@ -1,0 +1,60 @@
+@import './variables';
+
+.category-section{
+    .category-div{
+        .single-cat{
+            box-shadow: $box-shadow;
+            padding: 1rem 6rem;
+            margin: 0.9rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            img{
+                height: 30%;
+                width: 30%;
+            }
+            .cat-info{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                
+                button{
+                    margin-top: 1rem;
+                    background: $primary-color;
+                    color: white;
+                    box-shadow: none;
+                    border: none;
+                    padding: 0.5rem 1rem;
+                    border-radius: 4px;
+                    cursor: pointer;
+                }
+                p{
+                    text-align: center;
+                }
+            }
+        }
+        .single-cat:nth-child(even){
+            flex-direction: row-reverse;
+        }
+        .single-cat:last-child{
+            margin: 0.9rem 0 0 0;
+        }
+    }
+    @media screen and (max-width:768px){
+        .category-div{
+            .single-cat{
+                padding: 1rem;
+                .cat-info{
+                    p{
+                        margin: 0;
+                    }
+                }
+                img{
+                    height: 6rem;
+                    width: 10rem;
+                }
+            }
+        }
+    }
+}

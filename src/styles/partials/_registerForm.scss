@@ -1,0 +1,77 @@
+@import './variables';
+
+.form-section{
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    padding: 2rem;
+    .form-right-div{
+        .register-form{
+            .form-group{
+                display: flex;
+                flex-direction: column-reverse;
+                gap: 0.5rem;
+                margin: 1rem;
+                .register-input{
+                    border:none;
+                    border-bottom: 1px solid black;
+                    width: 25vw;
+                    padding: 0.3rem;
+                    outline: none;
+                    &:focus{
+                        border-color: #50dae2;
+                        +label{
+                            color: #50dae2;
+                        }
+                    }
+                }
+            }
+            .register-btn{
+                background-color: $primary-color;
+                color: white;
+                width: 25vw;
+                margin: 0 1rem;
+                padding: 0.8rem;
+                border: none;
+                cursor: pointer;
+                &:hover{
+                    opacity: 0.9;
+                }
+            }
+        }
+
+    }
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
+        .form-right-div{
+            .register-form{
+                .form-group{
+                    .register-input{
+                        width: 100%;
+                    }
+                }
+                .register-btn-div{
+                    display: flex;
+                    justify-content: center;
+                    .register-btn{
+                        width: 90%;
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (min-width: 769px) and (max-width: 1024px) {
+        .form-right-div{
+            .register-form{
+                .form-group{
+                    .register-input{
+                        width: 35vw;
+                    }
+                }
+                .register-btn{
+                    width: 35vw;
+                }
+            }
+        }
+    }
+}

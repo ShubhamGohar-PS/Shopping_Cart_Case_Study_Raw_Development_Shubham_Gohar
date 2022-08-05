@@ -1,0 +1,96 @@
+@import './variables';
+header{
+    box-shadow: $box-shadow;
+    padding: 1rem 4rem 0 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .logo-div{
+        display: flex;
+        gap: 6rem;
+        align-items: baseline;
+        img{
+            height: 25%;
+            width: 25%;
+        }
+        .main-nav{
+            display: flex;
+            gap: 10px;
+        }
+    }
+    .other-links{
+        display: flex;
+        align-self: baseline;
+        flex-direction: column;
+        .secondary-nav{
+            display: flex;
+            align-items: flex-end;
+            gap: 1rem;
+            margin-bottom: 1.4rem;
+            justify-content: center;
+        }
+        .cart-div{
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.8rem;
+            width: 8rem;
+            background-color: $secondary-color;
+            .icon-div{
+                cursor: pointer;
+                i{
+                    font-size: 1.2rem;
+                     color: $primary-color;
+                     
+                 }
+            }
+            p{
+                cursor: pointer;
+            }
+            
+        }
+    }
+    a{
+        cursor: pointer;
+        text-decoration: none;
+        color: black
+    }
+    @media screen and (max-width: 576px) {
+        
+            padding: 1rem 1rem 0 1rem;
+            .logo-div{
+                img{
+                  height: 50%;
+                  width: 50%;  
+                }
+                .main-nav{
+                    display: none;
+                }
+            }
+            .other-links{
+                .secondary-nav{
+                    display: none;
+                }
+            }
+        
+    }
+    @media screen and (max-width: 768px) and (min-width: 577px) {
+        
+            padding: 0rem 1rem 0 1rem;
+            .logo-div{
+                img{
+                  height: 25%;
+                  width: 25%;  
+                }
+                // .main-nav{
+                //     display: none;
+                // }
+            }
+            // .other-links{
+            //     .secondary-nav{
+            //         display: none;
+            //     }
+            // }
+        
+    }
+}

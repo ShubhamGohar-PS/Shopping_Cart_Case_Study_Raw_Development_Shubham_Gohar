@@ -1,0 +1,48 @@
+@use './partials/navigation';
+@use './partials/banner';
+@use './partials/category'; 
+@use './partials/footer';
+@use './partials/productListings';
+@use './partials/cart';
+@use './partials/registerForm';
+@use './partials/loginForm';
+@import './partials/variables';
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@400;600;700&display=swap');
+@import url('../../node_modules/@fortawesome/fontawesome-free/css/all.min.css');
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  // background-color: $primary-color;
+  font-family: $font-family;
+  margin: 0;
+  padding: 0;
+}
+.backdrop.active{
+  height: 100vh;
+  // width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: black;
+  opacity: 0.6;
+  z-index: 2;
+}
+
+.content-div::-webkit-scrollbar-track{
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  background-color: #F5F5F5;
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+.content-div::-webkit-scrollbar{
+  width: 2px;
+  background-color: #F5F5F5;
+}
+.content-div::-webkit-scrollbar-thumb{
+  background-color: #000000;  
+}
